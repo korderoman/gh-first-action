@@ -1,0 +1,15 @@
+# Inicia dando un nombre
+name: First Workflow  #Indica el nombre del workspace
+on: workflow_dispatch #Indica el evento que desencadena la acción (este evento indica que el workflow se iniciará manualmente)
+#Ahora se indican los trabajos que se realizarán
+jobs:
+  #Podemos  definir el nombre de un trabajo a discreción
+  first-job:
+    #un trabajo debe de tener ejecutadores (runs-on) es una palabra reservada que entra en la categoría de runners, un runner en esencia es una máquina virtual
+    runs-on: ubuntu-latest
+    #Ahora debe indicarse el conjunto de pasos que deben hacerse estos pasos van con un guión
+    steps:
+      - name: Print greeting
+        run: echo "Hello World"
+      - name: Print goodbye
+        run: echo "Done - bye"
